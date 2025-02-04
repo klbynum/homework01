@@ -6,3 +6,5 @@
 # squares of each element in the first list. The third list should contain the cubes of
 # each element in the first list. Print all three lists side-by-side in three columns. E.g.
 # the first row should contain 1, 1, 1 and the second row should contain 2, 4, 8.
+import pandas as pd
+
