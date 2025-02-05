@@ -3,19 +3,20 @@ def read_file():
     file = open('grades.txt', 'r')
 
     # read the file
-    # content = file.read()
-
-    # print(content)
     lines = file.readlines()
 
     for line in lines:
-        print(line)
+        stuName, stuID, courseName, courseGrade = line.strip().split(", ")
+        print(f"Name: {stuName}, ID: {stuID}, Course: {courseName}, Grade: {courseGrade} ")
+    print(stuName)
 
     # close the file
     file.close() 
+    
     return
 # add a student record func()
 def add_record():
+    # write to file
     return
 # print all student records func()
 def print_students():
