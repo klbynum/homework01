@@ -1,6 +1,6 @@
 def read_file():
     # open file
-    file = open('M2/grades.txt', 'r')
+    file = open('grades.txt', 'r')
 
     # read the file
     # content = file.read()
