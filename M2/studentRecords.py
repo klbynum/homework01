@@ -46,7 +46,7 @@ def search_student(students, stuSearch):
                 found = True
                 break
     if not found:
-        print("No record for student found")
+        print("No record for student found.\n")
 
 # update student grade func()
 def update_grade(students, stuSearch):
@@ -58,7 +58,7 @@ def update_grade(students, stuSearch):
             updated = True
             break
     if updated:
-        write_file(students)
+        #write_file(students) used for testing
         print(f"Student with ID {stuSearch} grade has been updated to {newGrade} \n")
         print_students(students)
 
@@ -73,15 +73,16 @@ def delete_student(students, stuSearch):
            break
 
     if deleted:
-        # write_file(students)
+        # write_file(students) used for testing
         print(f"Student with ID {stuSearch} deleted.\n")    
+        print_students(students)
 
 # main func()
 def main():
     students = read_file()
     print("Enter 1 to add student record")
     print("Enter 2 to view all student records")
-    print("Enter 3 to for a student by ID")
+    print("Enter 3 to search for a student by ID")
     print("Enter 4 to update student grade")
     print("Enter 5 to delete a student record")
     print("Enter 0 to exit")
@@ -111,7 +112,7 @@ def main():
            print("This is not an option. Please try again.")
        print("Enter 1 to add student record")
        print("Enter 2 to view all student records")
-       print("Enter 3 to for a student by ID")
+       print("Enter 3 to search for a student by ID")
        print("Enter 4 to update student record")
        print("Enter 5 to delete a student record")
        print("Enter 0 to exit")
