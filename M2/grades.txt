@@ -1,2 +1,4 @@
 Kemon Bynum, 234522, CSC170, 98 
-Belinda White, 553421, CSC260, 75 
+Robin White, 123456, CSC399, 83
+James Spark, 225871, HUM211, 90
+Mario Blake, 328775, MTH371, 73

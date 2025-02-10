@@ -42,7 +42,7 @@ def search_student(students, stuSearch):
         lines = file.readlines()
         for stuName, stuID, courseName, courseGrade in students: 
             if stuID == stuSearch:
-                print(f"Student Found: Name {stuName}, ID: {stuID}, Course {courseName}, Grade: {courseGrade}\n")
+                print(f"Student has been found!")
                 found = True
                 break
     if not found:
@@ -52,13 +52,29 @@ def search_student(students, stuSearch):
 def update_grade(students, stuSearch):
     newGrade = input("Enter a new grade for student: ")
     updated = False
-    search_student(students, stuSearch)
-
+    for index, (stuName, stuID, courseName, courseGrade) in  enumerate(students):
+        if stuID == stuSearch:
+            students[index] = (stuName, stuID, courseName, newGrade)
+            updated = True
+            break
+    if updated:
+        write_file(students)
+        print(f"Student with ID {stuSearch} grade has been updated to {newGrade} \n")
+        print_students(students)
 
 # delete a student record func()
 def delete_student(students, stuSearch):
     deleted = False
     # Remove the record
+    for i in range(len(students)):
+        if students[i][1] == stuSearch:
+           del students[i]
+           deleted = True
+           break
+
+    if deleted:
+        # write_file(students)
+        print(f"Student with ID {stuSearch} deleted.\n")    
 
 # main func()
 def main():
@@ -66,7 +82,7 @@ def main():
     print("Enter 1 to add student record")
     print("Enter 2 to view all student records")
     print("Enter 3 to for a student by ID")
-    print("Enter 4 to update student record")
+    print("Enter 4 to update student grade")
     print("Enter 5 to delete a student record")
     print("Enter 0 to exit")
     choice = input("Enter your choice: ")
