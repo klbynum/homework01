@@ -42,7 +42,8 @@ def search_student(students, stuSearch):
         lines = file.readlines()
         for stuName, stuID, courseName, courseGrade in students: 
             if stuID == stuSearch:
-                print(f"Student has been found!")
+                print(f"Student has been found!\n")
+                print(f"Student Name: {stuName}, ID: {stuID}, course name: {courseName}, course grade: {courseGrade}\n")
                 found = True
                 break
     if not found:
