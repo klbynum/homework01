@@ -30,5 +30,5 @@ def saveData(data, filename="meteoriteSites.json"):
 if __name__ == "__main__":
     landingSitesData = generateSites()
     saveData(landingSitesData)
-    print("\n",landingSitesData,"\n")
+    # print("\n",landingSitesData,"\n") used for testing
     print("Meteorite landing sites generated and saved to the .json file")

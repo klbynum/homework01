@@ -45,7 +45,7 @@ def calculateTripTime(filename="meteoriteSites.json"):
         totalTime += travelTime + sampleTime
 
         # Print leg details
-        print(f"leg ={leg}, time to travel = {travelTime:.2f} hr, time to sample = {sampleTime} hr")
+        print(f"leg = {leg}, time to travel = {travelTime:.2f} hr, time to sample = {sampleTime} hr")
 
         # Update the previous coordinates
         previousLat, previousLon = lat, lon
