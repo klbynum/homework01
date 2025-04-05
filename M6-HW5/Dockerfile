@@ -7,6 +7,7 @@ WORKDIR /app
 # Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade flask werkzeug 
 
 # Copy the application code and meteorite data file
 COPY . .

@@ -8,10 +8,14 @@ import os
 app = Flask(__name__)
 
 # Connect to Redis
-redis_client = redis.StrictRedis(host='redis', port=6379, db=0, decode_responses=True)
-
+redis_client = redis.StrictRedis(
+    host=os.getenv('REDIS_HOST', 'localhost'), 
+    port=6379, 
+    db=0, 
+    decode_responses=True
+)
 # File path to the meteorite data JSON
-METEORITE_DATA_FILE = '/homework01/meteoriteSites.json'
+METEORITE_DATA_FILE = '/homework01/M6-HW5/meteoriteSites2.json'
 
 
 def load_meteorite_data() -> list:
