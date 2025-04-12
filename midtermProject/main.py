@@ -139,6 +139,7 @@ def get_regions_by_country(country_name: str):
 
 @app.route('/region/<country_name>/<region_name>', methods=['GET'])
 def get_region_data(country_name: str, region_name: str):
+    # Return data on a specific region
     logging.info(f"Region {region_name} for country {country_name} queried.")
     country_data = sighting_data.get(country_name)
     if not country_data:
