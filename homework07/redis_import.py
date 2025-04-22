@@ -2,7 +2,7 @@ import redis
 import json
 
 # Read meteorite_landings.json file
-with open('M7/meteorite_landings.json', 'r') as f:
+with open('homework07/meteorite_landings.json', 'r') as f:
     data = json.load(f)
     meteorite_landings = data['meteorite_landings']
 
